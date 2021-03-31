@@ -19,13 +19,13 @@ export class FormFuncionarioComponent implements OnInit{
     this.getLoja();
   }
   @Input() funcionario: Funcionario = <Funcionario>{};
-  @Output() outputCliente: EventEmitter<Funcionario> = new EventEmitter();
+  @Output() outputFuncionario: EventEmitter<Funcionario> = new EventEmitter();
 
   onSubmit(f: NgForm) {
     let idLoja:number = this.idLoja.nativeElement.value;
     this.lojaService.getLoja(idLoja).subscribe(loja => {
       this.funcionario.loja = loja;
-      this.outputCliente.emit(this.funcionario);
+      this.outputFuncionario.emit(this.funcionario);
     });
   }
 

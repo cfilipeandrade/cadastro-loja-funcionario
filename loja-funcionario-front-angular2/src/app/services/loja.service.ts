@@ -19,9 +19,9 @@ export class LojaService {
     return this.http.get<Loja>(url);
   }
 
-  addLoja(Representante: Loja): Observable<Loja> {
+  addLoja(loja: Loja): Observable<Loja> {
     const url = `${environment.funcionariosApiUrl}/Loja/`;
-    return this.http.post<Loja>(url, Loja);
+    return this.http.post<Loja>(url, loja);
   }
 
   atualizaLoja(loja: Loja): Observable<Loja> {
