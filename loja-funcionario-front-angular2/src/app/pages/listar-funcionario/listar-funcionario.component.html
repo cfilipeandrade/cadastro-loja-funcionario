@@ -1,0 +1,53 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-md-12 mx-auto">
+      <app-error-msg></app-error-msg>
+      <div class="text-right">
+        <button type="button" class="btn btn-success" routerLink="/loja/criar">Nova loja</button>
+      </div>
+      <div class="text-right">
+        <button type="button" class="btn btn-success" routerLink="/funcionario/criar">Novo funcionario</button>
+      </div>
+      <div class="text-center" *ngIf="!existemClientes()">
+        Nenhum funcionario cadastrado.
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-md-4 mb-4" *ngFor="let funcionario of funcionario">
+      <div class="card">
+        <div class="card-header">
+          <span class="badge badge-pill">
+            CPF do Funcionario: {{funcionario.cpf}}
+          </span>
+        </div>
+        <div class="card-body">
+          <b>Nome: </b>
+          <p class="card-text">{{funcionario.nome}}</p>
+          <b>Telefone1: </b>
+          <p class="card-text">{{funcionario.telefone}}</p>
+          <b>Telefone2: </b>
+          <p class="card-text">{{funcionario.telefone2}}</p>
+          <b>Telefone3: </b>
+          <p class="card-text">{{funcionario.telefone3}}</p>
+          <b>Email: </b>
+          <p class="card-text">{{funcionario.email}}</p>
+          <b>Loja: </b>
+          <p class="card-text">{{funcionario.loja.nomeFantasia}}</p>
+        </div>
+        <div class="card-footer">
+          <div class="text-right">
+            <button type="button" class="btn btn-primary btn-sm ml-1"
+              routerLink="/funcionario/editar/{{funcionario.cpf}}">Editar</button>
+            <button type="button" class="btn btn-danger btn-sm ml-1"
+              (click)="deletaCliente(funcionario.cpf)">Deletar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row my-3" *ngIf="existemFuncionario()">
+    <div class="col-md-8 mx-auto text-center">
+    </div>
+  </div>
+</div>

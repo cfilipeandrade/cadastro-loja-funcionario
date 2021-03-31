@@ -1,0 +1,10 @@
+<select
+    class="form-control"
+    id="loja"
+    razaoSocial="loja"
+    cnpj="loja"
+    nomeFantasia="loja"
+    telefone="loja"
+    required>
+  <option value="{{loja.id}}" *ngFor="let loja of loja">{{loja.nomeFantasia}}</option>
+</select>

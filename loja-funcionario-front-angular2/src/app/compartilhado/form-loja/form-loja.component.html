@@ -1,0 +1,35 @@
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="cnpj">Loja</label>
+    <input class="form-control" id="cnpj" placeholder="cnpj loja" name="cnpj" #cnpj="ngModel"
+      [(ngModel)]="loja.cnpj" [class.is-invalid]="!cnpj.valid && cnpj.touched" required />
+    <div *ngIf="!cnpj.valid && cnpj.touched" class="text-danger">
+      Informe o CNPJ da loja.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="razaoSocial">Loja</label>
+    <input class="form-control" id="razaoSocial" placeholder="razao social loja" name="razaoSocial" #razaoSocial="ngModel"
+      [(ngModel)]="loja.razaoSocial" [class.is-invalid]="!razaoSocial.valid && razaoSocial.touched" required />
+    <div *ngIf="!razaoSocial.valid && razaoSocial.touched" class="text-danger">
+      Informe a razão social da loja.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="nomeFantasia">Loja</label>
+    <input class="form-control" id="nomeFantasia" placeholder="nomeFantasia loja" name="nomeFantasia" #nomeFantasia="ngModel"
+      [(ngModel)]="loja.nomeFantasia" [class.is-invalid]="!nomeFantasia.valid && razaoSocial.touched" required />
+    <div *ngIf="!nomeFantasia.valid && nomeFantasia.touched" class="text-danger">
+      Informe o nome fantasia da loja.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="telefone">Telefone</label>
+    <input class="form-control" type="string" id="telefone" name="telefone" #telefone="ngModel"
+      [(ngModel)]="loja.telefone" [class.is-invalid]="!telefone.valid && telefone.touched" required value="{{d}}"/>
+    <div *ngIf="!telefone.valid && telefone.touched" class="text-danger">
+      Informe o telefone da loja.
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Salvar</button>
+</form>

@@ -1,0 +1,57 @@
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="nome">Funcionario</label>
+    <input class="form-control" id="nome" placeholder="Nome funcionario" name="nome" #nome="ngModel"
+      [(ngModel)]="funcionario.nome" [class.is-invalid]="!nome.valid && nome.touched" required />
+    <div *ngIf="!nome.valid && nome.touched" class="text-danger">
+      Informe o nome do funcionario.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="cpf">Funcionario</label>
+    <input class="form-control" id="cpf" placeholder="cpf funcionario" name="cpf" #nome="ngModel"
+      [(ngModel)]="funcionario.cpf" [class.is-invalid]="!cpf.valid && cpf.touched" required />
+    <div *ngIf="!cpf.valid && cpf.touched" class="text-danger">
+      Informe o CPF do funcionario.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="telefone">Telefone1</label>
+    <input class="form-control" type="string" id="telefone" name="telefone" #telefone="ngModel"
+      [(ngModel)]="funcionario.telefone" [class.is-invalid]="!telefone.valid && telefone.touched" required value="{{d}}"/>
+    <div *ngIf="!telefone.valid && telefone.touched" class="text-danger">
+      Informe o telefone 1.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="telefone2">Telefone2</label>
+    <input class="form-control" type="string" id="telefone2" name="telefone2" #telefone2="ngModel"
+      [(ngModel)]="funcionario.telefone2" [class.is-invalid]="!telefone.valid && telefone2.touched" required value="{{d}}"/>
+    <div *ngIf="!telefone2.valid && telefone2.touched" class="text-danger">
+      Informe o telefone 2.
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="telefone2">Telefone3</label>
+    <input class="form-control" type="string" id="telefone3" name="telefone3" #telefone2="ngModel"
+      [(ngModel)]="funcionario.telefone3" [class.is-invalid]="!telefone3.valid && telefone3.touched" required value="{{d}}"/>
+    <div *ngIf="!telefone3.valid && telefone3.touched" class="text-danger">
+      Informe o telefone 3.
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input class="form-control" type="email" id="email" placeholder="E-Mail funcionario" name="email" #email="ngModel"
+        [(ngModel)]="funcionario.email" [class.is-invalid]="!email.valid && email.touched" required />
+      <div *ngIf="!email.valid && email.touched" class="text-danger">
+        Informe o E-Mail do funcionario.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="loja">Loja</label>
+    <select class="form-control" id="loja" name="loja" required #idLoja>
+      <option value="{{loja.id}}" *ngFor="let loja of loja">{{loja.nomeFantasia}}</option>
+    </select>
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Salvar</button>
+</form>
