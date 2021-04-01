@@ -12,3 +12,9 @@ Uma API REST de cadastro e gerenciamento de funcionários e lojas gerada usando 
 - Atualiza cliente "post" - (update)
 
 
+Back-end - domain http://localhost:4200
+A API apenas responde requisições cross-domain de http://localhost:4200
+
+Criado por Carlos Filipe Andrade - cfilipeas06@gmail.com
+
+
