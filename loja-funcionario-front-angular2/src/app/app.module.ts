@@ -1,3 +1,4 @@
+import { LojaService } from 'src/app/services/loja.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -23,8 +24,8 @@ import { ErrorMsgComponent } from './compartilhado/error-msg/error-msg.component
     EditarFuncionarioComponent,
     LojasComboComponent,
     FormLojaComponent,
-    CriarLojaComponent
-
+    CriarLojaComponent,
+    LojaService
   ],
   imports: [
     BrowserModule,

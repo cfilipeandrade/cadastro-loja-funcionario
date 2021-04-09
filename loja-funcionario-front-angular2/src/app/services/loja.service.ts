@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Loja } from './../interfaces/loja';
 
 @Injectable({
-  provideID
+  provideIn: "root"
 })
 export class LojaService {
 
