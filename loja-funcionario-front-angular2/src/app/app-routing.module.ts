@@ -1,9 +1,10 @@
+import { CriarLojaComponent } from './pages/criar-loja/criar-loja.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EditarFuncionarioComponent } from './pages/editar-funcionario/editar-funcionario.component';
-import { CriarFuncionarioComponent } from './pages/criar-loja/criar-loja.component';
+import { CriarFuncionarioComponent } from './pages/criar-funcionario/criar-funcionario.component';
 import { ListaFuncionarioComponent } from './pages/listar-funcionario/listar-funcionario.component';
-import { CriarLojaComponent } from './paginas/criar-loja/criar-loja.component';
+
 
 const routes: Routes = [
   { path: 'funcionario', component: ListaFuncionarioComponent},

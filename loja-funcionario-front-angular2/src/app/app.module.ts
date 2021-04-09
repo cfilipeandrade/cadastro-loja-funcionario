@@ -6,7 +6,7 @@ import { CriarLojaComponent } from './pages/criar-loja/criar-loja.component';
 import { FormLojaComponent } from './compartilhado/form-loja/form-loja.component';
 import { LojasComboComponent } from './compartilhado/lojas-combo/lojas-combo.component';
 import { EditarFuncionarioComponent } from './pages/editar-funcionario/editar-funcionario.component';
-import { CriarFuncionarioComponent } from './pages/criar-loja/criar-loja.component';
+import { CriarFuncionarioComponent } from './pages/criar-funcionario/criar-funcionario.component';
 import { FormFuncionarioComponent } from './compartilhado/form-funcionario/form-funcionario.component';
 import { ListaFuncionarioComponent } from './pages/listar-funcionario/listar-funcionario.component';
 import { AppRoutingModule } from './app-routing.module';
